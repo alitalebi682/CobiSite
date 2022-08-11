@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace CobiWebSite.BLL.News.Queries
 {
-    internal class FilterByNameHandler : BaseApplicationServiceHandler<FilterByName,List< NewsBaseQr>>
+    public class FilterByNameHandler : BaseApplicationServiceHandler<FilterByName,List< NewsBaseQr>>
     {
         public FilterByNameHandler(CobiWebSiteDbContext courseStoreDbContext) : base(courseStoreDbContext)
         {

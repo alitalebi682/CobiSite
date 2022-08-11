@@ -16,7 +16,7 @@ public class AddAuditFieldInterceptor : SaveChangesInterceptor
         var changeTracker = eventData.Context.ChangeTracker;
         var addedEntities = changeTracker.Entries().Where(c => c.State == Microsoft.EntityFrameworkCore.EntityState.Added);
         var modifiedEntities = changeTracker.Entries().Where(c => c.State == Microsoft.EntityFrameworkCore.EntityState.Modified);
-       // var DeleteEntities = changeTracker.Entries().Where(c => c.State == Microsoft.EntityFrameworkCore.EntityState.Deleted);
+        var DeleteEntities = changeTracker.Entries().Where(c => c.State == Microsoft.EntityFrameworkCore.EntityState.Deleted);
 
         DateTime now = DateTime.Now;
         foreach (var item in addedEntities)
@@ -31,6 +31,15 @@ public class AddAuditFieldInterceptor : SaveChangesInterceptor
         foreach (var item in modifiedEntities)
         {
             item.Property("UpdateBy").CurrentValue = "1";
+            item.Property("UpdateDate").CurrentValue = now;
+        }
+
+
+        foreach (var item in DeleteEntities)
+        {
+            item.Property("CreatingBy").CurrentValue = now.ToString("yyyy/MM/dd");
+            item.Property("UpdateBy").CurrentValue = now.ToString("yyyy/MM/dd");
+            item.Property("CreatingDate").CurrentValue = now;
             item.Property("UpdateDate").CurrentValue = now;
         }
     }

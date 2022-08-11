@@ -9,6 +9,7 @@ using CobiWebSite.BLL.News.Commands;
 using CobiWebSite.Model.News;
 using MediatR;
 using System.Reflection;
+using Microsoft.AspNetCore.Builder;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,6 +18,14 @@ builder.Services.AddDbContext<CobiWebSiteDbContext>(c => c.UseSqlServer("Server=
 AddInterceptors(new AddAuditFieldInterceptor()));
 
 builder.Services.AddMediatR(typeof(CreateNewsHandler).GetTypeInfo().Assembly);
+
+builder.Services.AddMediatR(typeof(CreateGroupNewsHandler).GetTypeInfo().Assembly);
+
+builder.Services.AddMediatR(typeof(CreateNewseRelatedHandler).GetTypeInfo().Assembly);
+
+builder.Services.AddMediatR(typeof(CreateTypeNewsBaseHandler).GetTypeInfo().Assembly);
+
+
 
 // Add services to the container.
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)

@@ -11,27 +11,39 @@ using System.Threading.Tasks;
 
 namespace CobiWebSite.Model.News.Commands
 {
-    public class UpdateNews : IRequest<ApplicationServiceResponse<NewsBase>>
+    public class CreateProject : IRequest<ApplicationServiceResponse<ProjectBase>>
     {
 
-        public int Id { get; set; }
-        [Display(Name = "نوع خبر ")]
-        public string Type { get; set; }
 
-        [Display(Name = "رو تیتر")]
-        public string? Rowtitle { get; set; }
+        [Display(Name = "کد پروژه")]
+        public int CodeProject { get; set; }
 
-        [Display(Name = "لید خبر")]
-        public string? Rowmainnews { get; set; }
+        [Display(Name = "عنوان پروژه")]
+        public string TypeProject { get; set; }
 
-        [Display(Name = "اولویت نمایش")]
-        public int? Showpriority { get; set; }
+
+
+        [Display(Name = "درصد پیشرفت")]
+        [Required]
+        public int PersProgress { get; set; }
+
+        [Display(Name = "زیربنا")]
+        public int Foundation { get; set; }
+
+
+        [Display(Name = "ظرفیت کل ")]
+        [Required]
+        public int TotalCapacity { get; set; }
 
         [Display(Name = "تاریخ شروع")]
+        [Required]
         public DateTime Startdate { get; set; }
 
         [Display(Name = "تاریخ پایان")]
         public DateTime Enddate { get; set; }
+
+        [Display(Name = "واحد")]
+        public string UnitProject { get; set; }
 
         [Display(Name = "تصویر اصلی")]
         public string AttachpicturemainUrl { get; set; }
@@ -40,30 +52,20 @@ namespace CobiWebSite.Model.News.Commands
         public string AttachpicturesUrl { get; set; }
 
 
-        [Display(Name = "نمایش پروفایل")]
-        public bool Showprofile { get; set; }
-
-        [Display(Name = "اخبار برگزیده")]
-        public string Slectnews { get; set; }
 
         [Display(Name = "متن اصلی")]
         [Required]
         public string Mainnews { get; set; }
 
-        [Display(Name = "کلمات کلیدی")]
-        public string Keywordnews { get; set; }
-
-
         [Display(Name = "توضیحات")]
         public string Description { get; set; }
+
 
         [Display(Name = "فعال")]
         public Boolean IsActive { get; set; }
 
 
-
-
-
+       
 
 
     }

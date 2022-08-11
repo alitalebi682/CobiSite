@@ -10,9 +10,9 @@ public abstract class BaseApplicationServiceHandler<TRequest, TResult> : IReques
 {
     protected readonly CobiWebSiteDbContext _CobiWebSiteDbContext;
     private ApplicationServiceResponse<TResult> _response = new ApplicationServiceResponse<TResult> { };
-    public BaseApplicationServiceHandler(CobiWebSiteDbContext courseStoreDbContext)
+    public BaseApplicationServiceHandler(CobiWebSiteDbContext CobiWebSiteDbContext)
     {
-        _CobiWebSiteDbContext = courseStoreDbContext;
+        _CobiWebSiteDbContext = CobiWebSiteDbContext;
     }
 
     public async Task<ApplicationServiceResponse<TResult>> Handle(TRequest request, CancellationToken cancellationToken)

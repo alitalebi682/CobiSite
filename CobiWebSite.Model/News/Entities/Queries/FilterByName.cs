@@ -13,6 +13,15 @@ namespace CobiWebSite.Model.News.Entities.Queries
     {
 
         public string? Type { get; set; }
+       
+
+    }
+    public class FilterByNameGroupNews : IRequest<ApplicationServiceResponse<List<NewsBaseQr>>>
+    {
+
+      
+        public string GroupNewsName { get; set; }
+       
 
     }
 }

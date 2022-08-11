@@ -12,12 +12,11 @@ namespace cobiWebSite.DAL.CobiDbContext
     {
 
         public DbSet<NewsBase> NewsBases { get; set; }
-
-
-        public DbSet<Typeproject> Typeprojects { get; set; }
-        
-
         public DbSet<GroupNews> GroupNews { get; set; }
+        public DbSet<TypeNewsBase> TypeNewsBases { get; set; }
+        public DbSet<NewseRelated> NewsRelateds { get; set; }
+        public DbSet<SingleUploadFile> SingleUploadFiles { get; set; }
+
 
 
 
@@ -33,6 +32,13 @@ namespace cobiWebSite.DAL.CobiDbContext
             base.OnModelCreating(modelBuilder);
             modelBuilder.ApplyConfigurationsFromAssembly(this.GetType().Assembly);
 
+    //        modelBuilder.Entity<Student>()
+    //.HasOne<StudentAddress>(s => s.Address)
+    //.WithOne(ad => ad.Student)
+    //.HasForeignKey<StudentAddress>(ad => ad.AddressOfStudentId);
+
+
+    //        modelBuilder.Entity<NewsBase>().HasOne<GroupNews>(s =>s.N).WithOne(Na =>Na.
 
             foreach ( var item in modelBuilder.Model.GetEntityTypes())
             {

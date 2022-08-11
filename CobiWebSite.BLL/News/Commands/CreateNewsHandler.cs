@@ -15,11 +15,38 @@ public class CreateNewsHandler : BaseApplicationServiceHandler<CreateNews, NewsB
     {
         NewsBase NewsBase = new()
         {
-            Type = request.Type
-            //Group = request.Group,
-            //Rowtitle = request.Rowtitle,
-            //GroupNews=request.GroupNews,
-            //Rowmainnews=request.Rowmainnews
+            
+            Type = request.Type,
+            Description = request.Description,
+            AttachpicturemainUrl =request.AttachpicturemainUrl,
+            AttachpicturesUrl = request.AttachpicturesUrl,
+
+            Keywordnews = request.Keywordnews,
+            IsActive = request.IsActive,
+           
+            Enddate=request.Enddate,
+            
+            Mainnews=request.Mainnews,
+            
+            Showprofile=request.Showprofile,
+           
+            Slectnews=request.Slectnews,
+            Rowtitle = request.Rowtitle,
+            Rowmainnews = request.Rowmainnews,
+            Showpriority = request.Showpriority,
+            Startdate=request.Startdate,
+
+            GroupNews = request.GroupNews,
+
+            NewseRelated=request.NewseRelated,
+            TypeNewsBase=request.TypeNewsBase,
+            //GroupNewsId=request.GroupNewsId,
+           
+
+
+
+
+
 
 
         };

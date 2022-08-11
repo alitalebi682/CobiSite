@@ -29,10 +29,21 @@ namespace CobiWebSite.BLL.News.Commands
             }
             else
             {
-                NewsBase.Type = request.Type;
+                {
+
+                    NewsBase.Type = request.Type;
+                    NewsBase.AttachpicturemainUrl = request.AttachpicturemainUrl;
+                    NewsBase.AttachpicturesUrl = request.AttachpicturesUrl;
+                    NewsBase.Rowmainnews = request.Rowmainnews;
+                    NewsBase.Rowtitle = request.Rowtitle;
+                   
+                    
+                }
+
                 await _CobiWebSiteDbContext.SaveChangesAsync();
                 AddRsult(NewsBase);
             }
+            
 
         }
         

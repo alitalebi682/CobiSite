@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31919.166
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CobiWebSite.Model", "CobiWebSite.Model\CobiWebSite.Model.csproj", "{18986D6C-C832-4486-B431-7151457287E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CobiWebSite.Model", "CobiWebSite.Model\CobiWebSite.Model.csproj", "{18986D6C-C832-4486-B431-7151457287E7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cobiWebSite.DAL", "cobiWebSite.DAL\cobiWebSite.DAL.csproj", "{BA5CD62D-9F14-4ABA-A432-5E4DBFF3F907}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cobiWebSite.DAL", "cobiWebSite.DAL\cobiWebSite.DAL.csproj", "{BA5CD62D-9F14-4ABA-A432-5E4DBFF3F907}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CobiWebSite.API", "CobiWebSite.API\CobiWebSite.API.csproj", "{FB344E53-D8DB-4703-88CA-064E0B99513F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CobiWebSite.API", "CobiWebSite.API\CobiWebSite.API.csproj", "{FB344E53-D8DB-4703-88CA-064E0B99513F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CobiWebSite.BLL", "CobiWebSite.BLL\CobiWebSite.BLL.csproj", "{CA5AC27A-F834-4550-8A5D-FDD900230DBF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CobiWebSite.BLL", "CobiWebSite.BLL\CobiWebSite.BLL.csproj", "{CA5AC27A-F834-4550-8A5D-FDD900230DBF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

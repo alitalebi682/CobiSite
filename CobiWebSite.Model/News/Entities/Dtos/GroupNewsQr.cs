@@ -4,14 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CobiWebSite.Model.News.Entities
+namespace CobiWebSite.Model.News.Entities.Dtos
 {
-    public class Typeproject
+    public class GroupNewsQr
     {
-        public int TypeprojectID { get; set; }
+        public int NewsBaseId { get; set; }
+      
 
         public string GroupNewsName { get; set; }
 
-        public string PictureGroupNews { get; set; }
+        public string PictureGroupNewsUrl { get; set; }
     }
 }
